@@ -4,7 +4,7 @@ import request from 'supertest';
 
 const port = '12345';
 
-describe('index', () => {
+describe('debug-corner', () => {
 
   before(done => {
     dora({
@@ -15,10 +15,15 @@ describe('index', () => {
     setTimeout(done, 1000);
   });
 
-  it('GET /package.json', done => {
+  it('GET /dora-plugin-debug-corner.js', done => {
     request(`http://localhost:${port}`)
-      .get('/package.json')
-      .expect(/\.\/index\.js/, done);
+      .get('/dora-plugin-debug-corner.js')
+      .expect(200)
+      .end(function(err, res){
+        if (err) return done(err);
+        if (res.text !== 'console.log(1);') throw new Error("dora-plugin-debug-corner.js is not correct"); 
+        done();
+      });
   });
 });
 
