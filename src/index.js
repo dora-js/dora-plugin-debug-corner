@@ -34,6 +34,7 @@ export default {
           return;
         }
         content = injectScript + content;
+        this.body = content;
 
         return;
       }
