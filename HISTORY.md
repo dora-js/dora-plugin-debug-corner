@@ -2,6 +2,10 @@
 
 ---
 
+## 0.1.3
+
+- fix: babel-polyfill should be dependencies 
+
 ## 0.1.2
 
 - fix: 404 when html file lack of doctype and add more test cases
