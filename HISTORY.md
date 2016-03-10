@@ -2,7 +2,7 @@
 
 ---
 
-## 0.2.0
+## 0.2.1
 
 - deps: delete bebel-polyfill and upgrade dora to 0.3.x
 
