@@ -1,4 +1,3 @@
-import 'babel-polyfill';
 import { existsSync, readFileSync } from 'fs';
 import { parse } from 'url';
 import { join } from 'path';
